@@ -2,3 +2,11 @@
 // Created by vishal gade on 9/18/18.
 //
 
+int Solution::singleNumber(const vector<int> &A) {
+    int ans=A[0];
+    for(int i=1;i<A.size();i++)
+    {
+        ans = (ans ^ A[i]);
+    }
+    return ans;
+}
